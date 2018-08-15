@@ -42,7 +42,7 @@ class Sale {
     public function getTotal() { 
         $total = 0;
         $subTotal = 0;
-        for ($i = 1; $i <= count($this->lineItems); $i++) {
+        for ($i = 0; $i <= count($this->lineItems)-1; $i++) {
             $subTotal = $this->lineItems[$i]->getSubTotal();
             $total = $total + $subTotal;
         }

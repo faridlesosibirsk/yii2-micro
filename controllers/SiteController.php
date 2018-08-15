@@ -10,7 +10,7 @@ class SiteController extends Controller {
     public function actionIndex() {
         $storeController = new StoreController();
         $store = $storeController->model();
-        $this->layout = '@app/views/layouts/my';
+        $this->layout = '@app/views/layouts/system';
         return $this->render('index', [
                     'store' => $store,
         ]);

@@ -17,7 +17,6 @@ class StoreController {
             $store = new Store();
             $session->set('store', $store);
         }
-         
         /*
         try {
             $store = $session->get('store');
@@ -26,6 +25,12 @@ class StoreController {
             $store = new Store();
             $session->set('store', $store);
         }*/
+        $id=100;
+        $quantity=7;
+        $store->getRegister()->makeNewSale();
+        $store->getRegister()->enterItem($id, $quantity);
+        
+        
         $session->set('store', $store);
         return $store;
     }
