@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models\my;
+namespace app\models\core;
 
 class ProductDescription {
 

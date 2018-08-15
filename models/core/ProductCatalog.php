@@ -1,8 +1,8 @@
 <?php
 
-namespace app\models\my;
+namespace app\models\core;
 
-use app\models\my\ProductDescription;
+use app\models\core\ProductDescription;
 
 // TODO //use yii\db\ActiveRecord;
 

@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\ProductCatalog;
-use app\models\my\ProductDescription;
+use app\models\core\ProductCatalog;
+use app\models\core\ProductDescription;
 
 final class ProductCatalogTest extends TestCase {
 

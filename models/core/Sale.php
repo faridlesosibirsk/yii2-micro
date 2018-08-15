@@ -1,10 +1,10 @@
 <?php
 
-namespace app\models\my;
+namespace app\models\core;
 
-use app\models\my\SalesLineItem;
-use app\models\my\Payment;
-use app\models\my\ProductDescription;
+use app\models\core\SalesLineItem;
+use app\models\core\Payment;
+use app\models\core\ProductDescription;
 
 //require_once '../models/my/Payment.php';
 

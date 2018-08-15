@@ -1,10 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\SalesLineItem;
-use app\models\my\Payment;
-use app\models\my\ProductDescription;
-use app\models\my\Sale;
+use app\models\core\SalesLineItem;
+use app\models\core\Payment;
+use app\models\core\ProductDescription;
+use app\models\core\Sale;
 
 //require_once '../../models/my/Sale.php';
 //require_once '../../models/my/SalesLineItem.php';

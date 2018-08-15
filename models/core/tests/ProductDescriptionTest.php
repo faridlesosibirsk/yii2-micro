@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\ProductDescription;
+use app\models\core\ProductDescription;
 
 final class ProductDescriptionTest extends TestCase {
 

@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\Payment;
+use app\models\core\Payment;
 
 final class PaymentTest extends TestCase {
 

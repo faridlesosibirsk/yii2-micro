@@ -1,9 +1,9 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\Register;
-use app\models\my\ProductCatalog;
-use app\models\my\Store;
+use app\models\core\Register;
+use app\models\core\ProductCatalog;
+use app\models\core\Store;
 
 //require_once '../../models/my/Register.php';
 //require_once '../../models/my/Store.php';

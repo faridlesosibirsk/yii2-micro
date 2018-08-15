@@ -1,9 +1,9 @@
 <?php
 
-namespace app\models\my;
+namespace app\models\core;
 
-use app\models\my\Register;
-use app\models\my\ProductCatalog;
+use app\models\core\Register;
+use app\models\core\ProductCatalog;
 
 class Store {
 

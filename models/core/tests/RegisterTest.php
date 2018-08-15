@@ -1,10 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\Sale;
-use app\models\my\ProductCatalog;
-use app\models\my\ProductDescription;
-use app\models\my\Register;
+use app\models\core\Sale;
+use app\models\core\ProductCatalog;
+use app\models\core\ProductDescription;
+use app\models\core\Register;
 
 //require_once '../../models/my/Register.php';
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace app\models\my;
+namespace app\models\core;
 
-use app\models\my\Sale;
-use app\models\my\ProductCatalog;
-use app\models\my\ProductDescription;
+use app\models\core\Sale;
+use app\models\core\ProductCatalog;
+use app\models\core\ProductDescription;
 
 class Register {
 

@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use app\models\my\SalesLineItem;
-use app\models\my\ProductDescription;
+use app\models\core\SalesLineItem;
+use app\models\core\ProductDescription;
 
 //require_once '../../models/my/SalesLineItem.php';
 
