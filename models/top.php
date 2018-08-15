@@ -2,10 +2,7 @@
 
 namespace app\models;
 
-use Yii;
-use yii\base\Model;
-
-class top {//extends Model {
+class top {
 
     public $name = 'My Yii Application';
     public $count = 0;
