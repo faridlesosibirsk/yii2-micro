@@ -15,8 +15,7 @@
     },
     "autoload": {
         "classmap": [
-            "models/",
-            "controllers/"
+            "models/core/"
         ],
         "psr-4": {           
         }
@@ -28,5 +27,6 @@
         }
     ],
     "require-dev": {
+        "phpunit/phpunit": "^6"
     }
 }
