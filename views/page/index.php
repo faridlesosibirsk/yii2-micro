@@ -5,6 +5,7 @@
 $this->title = $model->name;
 ?>
 <div class="w3-container"> 
-    <h1><?= $this->title ?>
-    </h1>
+    <h1><?= $this->title ?></h1>
+    <p><?= $model->count ?></p>
 </div>
+

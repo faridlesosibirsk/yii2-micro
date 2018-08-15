@@ -23,7 +23,6 @@ use yii\helpers\Html;
         <header>
             <div class="w3-container w3-teal">
                 <h1>Моя компания</h1>
-                <p></p>
             </div>
         </header>
         <?= $content ?>
