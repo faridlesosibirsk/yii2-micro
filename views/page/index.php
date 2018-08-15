@@ -2,10 +2,9 @@
 /* @var $this yii\web\View */
 /* @var $model app\models\top */
 
-$this->title = $model->name;//'My Yii Application';
-//$model->name;
+$this->title = $model->name;
 ?>
-
-<h1><?= $this->title ?>
-</h1>
-
+<div class="w3-container"> 
+    <h1><?= $this->title ?>
+    </h1>
+</div>
