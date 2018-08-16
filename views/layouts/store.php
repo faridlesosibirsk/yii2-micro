@@ -20,16 +20,15 @@ use yii\helpers\Html;
     </head>
     <body>
         <?php $this->beginBody() ?>
+        <div class="w3-bar w3-black">
+            <a href="http://127.0.0.1/web/" class="w3-bar-item w3-button w3-hover-red">Home</a>
+            <div href="" class="w3-bar-item w3-red">Store</div>
+        </div> 
+        <!-- Header with image -->
         <header>
-            <div class="w3-container w3-teal">
-                <h1>POSNextGen</h1>
-            </div>
         </header>
         <?= $content ?>
         <footer>
-            <div class="w3-container w3-teal">
-                <p>POSNextGen &copy; 2018</p>
-            </div>
         </footer>
         <?php $this->endBody() ?>
     </body>

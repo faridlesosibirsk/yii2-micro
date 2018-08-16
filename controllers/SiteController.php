@@ -8,10 +8,17 @@ use app\models\StoreController;
 class SiteController extends Controller {
 
     public function actionIndex() {
+        /*$storeController = new StoreController();
+        $store = $storeController->model();*/
+        $this->layout = '@app/views/layouts/home';
+        return $this->render('home');
+    }
+
+    public function actionStore() {
         $storeController = new StoreController();
         $store = $storeController->model();
-        $this->layout = '@app/views/layouts/system';
-        return $this->render('index', [
+        $this->layout = '@app/views/layouts/store';
+        return $this->render('store', [
                     'store' => $store,
         ]);
     }
