@@ -2,37 +2,55 @@
 
 namespace app\models;
 
-use Yii;
+use Yii; //$session = Yii::$app->session;
+use yii\base\Model;
 use app\models\core\Store;
 
-class StoreController {
+class StoreController extends Model {
 
-    public function model() {
-        $session = Yii::$app->session;
-        
-        if ($session->isActive) {
-            $store = $session->get('store');
+    private $store;
+    private $cansel;
+    private $enter;
+    private $get;
+    public $id;
+    public $quantity;
+
+    public function rules() {
+        return [
+            [['id', 'quantity'], 'required']
+        ];
+    }
+
+    public function __construct() {
+        parent::__construct();
+        $this->store = new Store();
+    }
+
+    public function store($id, $quantity) {
+        $this->store->getRegister()->makeNewSale();
+        $this->store->getRegister()->enterItem($id, $quantity);
+        return $this->store->getRegister()->getTotalSale();
+    }
+
+    public function getTotal() {
+        if (assert($this->store)) {
+            return 0;
         } else {
-            $session->open();
-            $store = new Store();
-            $session->set('store', $store);
+            return $this->store->getRegister()->getTotalSale();
         }
-        /*
-        try {
-            $store = $session->get('store');
-        } catch (Exception $ex) {
-            $session->open();
-            $store = new Store();
-            $session->set('store', $store);
-        }*/
-        $id=100;
-        $quantity=7;
-        $store->getRegister()->makeNewSale();
-        $store->getRegister()->enterItem($id, $quantity);
         
-        
-        $session->set('store', $store);
-        return $store;
+    }
+
+    public function cansel() {
+        return $this->cansel;
+    }
+
+    public function enter() {
+        return $this->enter;
+    }
+
+    public function get() {
+        return $this->get;
     }
 
 }

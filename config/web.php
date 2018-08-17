@@ -9,6 +9,9 @@ $config = [
             'cookieValidationKey' => 'pdtxrk6VVh-CJI2hOnuFwlYfAWkHguGl',
         ],
     ],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+    ],
 ];
 
 return $config;
