@@ -14,6 +14,7 @@ class StoreController extends Model {
     private $get;
     public $id;
     public $quantity;
+    public $total;
 
     public function rules() {
         return [
@@ -29,16 +30,17 @@ class StoreController extends Model {
     public function store($id, $quantity) {
         $this->store->getRegister()->makeNewSale();
         $this->store->getRegister()->enterItem($id, $quantity);
-        return $this->store->getRegister()->getTotalSale();
+        //return $this->store->getRegister()->getTotalSale();
+        $this->total = $this->store->getRegister()->getTotalSale();
     }
 
-    public function getTotal() {
+    public function getTotal() {/*
         if (assert($this->store)) {
             return 0;
         } else {
             return $this->store->getRegister()->getTotalSale();
         }
-        
+        */
     }
 
     public function cansel() {

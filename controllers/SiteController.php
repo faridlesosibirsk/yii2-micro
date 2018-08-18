@@ -28,9 +28,10 @@ class SiteController extends Controller {
         $this->layout = '@app/views/layouts/store';
         if ($model->load(Yii::$app->request->post())) {
             //var_dump($model['id']);
-            $e=$this->storeController->store($model['id'], $model['quantity']);
-            var_dump($e);
-            return $this->render('store', ['model' => $model,]);
+            //$e=
+            $this->storeController->store($model['id'], $model['quantity']);
+            //var_dump($e);
+            return $this->render('store', ['model' => $model]);
         }
         return $this->render('store', [
                     'model' => $this->storeController,
