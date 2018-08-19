@@ -9,6 +9,7 @@ use app\models\Country;
 class CountryController extends Controller {
 
     public function actionIndex() {
+        $this->layout = '@app/views/layouts/country';
         $query = Country::find();
 
         $pagination = new Pagination([
