@@ -22,7 +22,7 @@ use yii\helpers\Html;
         <?php $this->beginBody() ?>
         <header>
         </header>
-        <?= $content ?>
+            <?= $content ?>
         <footer>
         </footer>
         <?php $this->endBody() ?>

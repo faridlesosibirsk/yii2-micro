@@ -7,7 +7,7 @@ use yii\widgets\LinkPager;
     <h1>Countries</h1>
     <table class="w3-table-all w3-hoverable">
         <thead>
-            <tr class="w3-light-grey">
+            <tr class="w3-blue">
                 <th>Code</th>
                 <th>Name</th>
                 <th>Population</th>
