@@ -3,8 +3,6 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
 use yii\web\Controller;
 use app\models\LoginForm;
 use app\models\StoreController;
@@ -30,6 +28,7 @@ class SiteController extends Controller {
     }
 
     public function actionLogin() {
+        $this->layout = '@app/views/layouts/login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
