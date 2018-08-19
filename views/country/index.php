@@ -1,37 +1,35 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\LinkPager;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\models\CountrySearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Countries';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="w3-container"> 
-    <h1>Countries</h1>
-    <table class="w3-table-all w3-hoverable">
-        <thead>
-            <tr class="w3-light-grey">
-                <th>Code</th>
-                <th>Name</th>
-                <th>Population</th>
-            </tr>
-        </thead>
-        <?php foreach ($countries as $country): ?>
-            <tr><td>
-                    <?= Html::encode("{$country->code}") ?>:
-                </td><td>
-                    <?= Html::encode("{$country->name}") ?>:
-                </td><td>
-                    <?= $country->population ?>
-                </td></tr>
-        <?php endforeach; ?>
-    </table>
-<div class="w3-padding"> 
-    <?=
-    LinkPager::widget([
-        'pagination' => $pagination,
-        'options' => [
-            'tag' => 'div',
-            'class' => 'pagination',
+<div class="country-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Country', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'code',
+            'name',
+            'population',
+
+            ['class' => 'yii\grid\ActionColumn'],
         ],
-        'activePageCssClass' => 'active',
-    ])
-    ?>
-</div></div>
+    ]); ?>
+</div>
