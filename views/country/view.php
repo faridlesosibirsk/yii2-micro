@@ -10,28 +10,45 @@ $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Countries', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="country-view">
+<div class="w3-container">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->code], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->code], [
-            'class' => 'btn btn-danger',
+        <?= Html::a('Update', ['update', 'id' => $model->code], ['class' => 'w3-button w3-blue']) ?>
+        <?=
+        Html::a('Delete', ['delete', 'id' => $model->code], [
+            'class' => 'w3-button w3-red',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
-        ]) ?>
+        ])
+        ?>
     </p>
 
-    <?= DetailView::widget([
+    <?=
+    DetailView::widget([
         'model' => $model,
+        'options' => ['class' => 'w3-table-all w3-hoverable'],
         'attributes' => [
-            'code',
-            'name',
-            'population',
+            //'code',
+            [
+                'label' => 'code',
+                'attribute' => 'code',
+            ],
+            //'name',
+            [
+                'label' => 'name',
+                'attribute' => 'name',
+            ],
+            //'population',
+            [
+                'label' => 'population',
+                'attribute' => 'population',
+            ],
         ],
-    ]) ?>
+    ])
+    ?>
 
 </div>
