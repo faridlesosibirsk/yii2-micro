@@ -8,20 +8,22 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="country-form">
+<?php
+$form = ActiveForm::begin([
+            'options' => ['class' => 'w3-container w3-margin'],
+        ]);
+?>
+<p>
+<label class="w3-text-blue"><b>code</b></label>
+<?= $form->field($model, 'code')->textInput(['class' => 'w3-input w3-border']) ?></p><p>
+<label class="w3-text-blue"><b>name</b></label>
+        <?= $form->field($model, 'name')->textInput(['class' => 'w3-input w3-border']) ?></p><p>
+<label class="w3-text-blue"><b>population</b></label>
+<?= $form->field($model, 'population')->textInput(['class' => 'w3-input w3-border']) ?></p>
 
-    <?php $form = ActiveForm::begin(); ?>
+<p>
+    <?= Html::submitButton('Save', ['class' => 'w3-btn w3-blue']) ?>
+</p>
 
-    <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+<?php ActiveForm::end(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'population')->textInput() ?>
-
-    <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
-    </div>
-
-    <?php ActiveForm::end(); ?>
-
-</div>

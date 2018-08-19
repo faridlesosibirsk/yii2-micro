@@ -41,9 +41,9 @@ class Country extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'code' => 'Code',
-            'name' => 'Name',
-            'population' => 'Population',
+            'code' => '',
+            'name' => '',
+            'population' => '',
         ];
     }
 }
