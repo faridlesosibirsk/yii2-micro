@@ -37,6 +37,8 @@ use yii\helpers\Html;
         <div class="w3-bar w3-black">
             <div href="" class="w3-bar-item w3-red">Home</div>
             <a href="http://127.0.0.1/web/index.php?r=site/store" class="w3-bar-item w3-button w3-hover-red">Store</a>
+            <a href="http://127.0.0.1/web/index.php?r=site/login" class="w3-bar-item w3-button w3-hover-red">Login</a>
+            <a href="http://127.0.0.1/web/index.php?r=site/logout" class="w3-bar-item w3-button w3-hover-red">Logout</a>
         </div> 
         <!-- Header with image -->
         <header class="bgimg w3-display-container w3-grayscale-min" id="home">

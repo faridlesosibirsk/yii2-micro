@@ -21,7 +21,7 @@ use yii\helpers\Html;
     <body>
         <?php $this->beginBody() ?>
         <div class="w3-bar w3-black">
-            <div href="" class="w3-bar-item w3-red">Home</div>
+            <a href="http://127.0.0.1/web/" class="w3-bar-item w3-button w3-hover-red">Home</a>
             <a href="http://127.0.0.1/web/index.php?r=site/store" class="w3-bar-item w3-button w3-hover-red">Store</a>
         </div> 
         <!-- Header with image -->
