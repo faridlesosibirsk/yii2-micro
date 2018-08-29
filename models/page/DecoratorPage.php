@@ -9,5 +9,4 @@ abstract class DecoratorPage implements InterfacePage {
     abstract function Post();
 
     abstract function __construct(String $Text, InterfacePage $Page);
-
 }

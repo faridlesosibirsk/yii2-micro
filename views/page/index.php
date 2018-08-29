@@ -1,4 +1,5 @@
 <?php
+
 /* @var $this yii\web\View */
 /* @var $model app\models\top */
 
@@ -12,9 +13,8 @@ use app\models\page\Paragraph;
 use app\models\page\Title;
 
 //echo $page=(new Title('Title', new Paragraph('Paragraph', new Page())))->Post();
-$p1=new Page();
-$p3=new Title('Title', $p1);
-$p2=new Paragraph('Paragraph', $p3);
+$p1 = new Page();
+$p3 = new Title('Title', $p1);
+$p2 = new Paragraph('Paragraph', $p3);
 echo $p2->Post();
-
 ?>

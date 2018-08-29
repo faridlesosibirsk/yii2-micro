@@ -5,20 +5,18 @@ namespace app\models\page;
 use app\models\page\DecoratorPage;
 
 class Paragraph extends DecoratorPage {
-    
-    public $warp;
-    public $text; 
+
+    private $warp;
+    private $text;
 
     function Post() {
         $this->warp->Post();
         echo '<p>' . $this->text . '</p>';
-        
     }
 
     function __construct(String $Text, InterfacePage $Page) {
-        //parent::__construct($Page);
-        $this->text=$Text;
-        $this->warp=$Page;  
+        $this->text = $Text;
+        $this->warp = $Page;
     }
 
 }
