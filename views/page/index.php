@@ -17,4 +17,9 @@ $p1 = new Page();
 $p3 = new Title('Title', $p1);
 $p2 = new Paragraph('Paragraph', $p3);
 echo $p2->Post();
+$a[] = new Page();
+$a[] = new Title('Title', $a[0]);
+$a[] = new Paragraph('Paragraph', $a[1]);
+$a[count($a)-1]->Post();
+echo count($a);
 ?>
