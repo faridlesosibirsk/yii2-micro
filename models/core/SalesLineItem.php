@@ -2,12 +2,21 @@
 
 namespace app\models\core;
 
-class SalesLineItem {
+//use app\models\core\ProductDescription;
+
+interface InterfaceSalesLineItem {
+
+    public function __construct(InterfaceProductDescription $desc, int $quantity);
+
+    public function getSubTotal();
+}
+
+final class SalesLineItem implements InterfaceSalesLineItem {
 
     private $quantity;
     private $description;
 
-    public function SaleLineItem($desc, $quantity) {
+    public function __construct(InterfaceProductDescription $desc, int $quantity) {
         $this->description = $desc;
         $this->quantity = $quantity;
     }

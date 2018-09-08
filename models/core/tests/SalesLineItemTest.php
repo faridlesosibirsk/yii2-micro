@@ -13,16 +13,16 @@ final class SalesLineItemTest extends TestCase {
 
     public function testSalesLineItem() {
 
-        $this->salesLineItem = new SalesLineItem();
+        //$this->salesLineItem = new SalesLineItem();
 
-        $this->desc = new ProductDescription();
+        //$this->desc = new ProductDescription();
         $id = 100;
         $price = 3;
         $description = 'товар 1';
-        $this->desc->ProductDescription($id, $price, $description);
+        $this->desc = new ProductDescription($id, $price, $description);
 
         $quantity = 7;
-        $this->salesLineItem->SaleLineItem($this->desc, $quantity);
+        $this->salesLineItem = new SalesLineItem($this->desc, $quantity);
         $SubTotal = 21;
 
         $this->assertEquals($this->salesLineItem->getSubTotal(), $SubTotal);

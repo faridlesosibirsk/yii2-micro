@@ -29,14 +29,14 @@ final class SaleTest extends TestCase {
 
     function testMakeLineItem() {
         $this->Sale = new Sale();
-        $saleLineItem = new SalesLineItem();
-        $desc = new ProductDescription();
+        //$saleLineItem = new SalesLineItem();
+        //$desc = new ProductDescription();
         $id = 100;
         $price = 3;
         $description = 'товар 1';
-        $desc->ProductDescription($id, $price, $description);
+        $desc = new ProductDescription($id, $price, $description);
         $quantity = 7;
-        $saleLineItem->SaleLineItem($desc, $quantity);
+        $saleLineItem = new SalesLineItem($desc, $quantity);
         $lineItems = array();
         $lineItems = $lineItems + array($saleLineItem);
         $SubTotal=21;

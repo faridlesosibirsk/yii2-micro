@@ -6,12 +6,27 @@ use app\models\core\Sale;
 use app\models\core\ProductCatalog;
 use app\models\core\ProductDescription;
 
-class Register {
+interface InterfaceRegister {
+
+    public function __construct(InterfaceProductCatalog $catalog);
+
+    public function endSale();
+
+    public function enterItem(int $id, int $quantity);
+
+    public function makeNewSale();
+
+    public function makePayment(int $cashTendered);
+
+    public function getTotalSale();
+}
+
+final class Register implements InterfaceRegister {
 
     private $catalog;
     private $currentSale;
 
-    public function __construct($catalog) {
+    public function __construct(InterfaceProductCatalog $catalog) {
         $this->catalog = $catalog;
     }
 
@@ -19,17 +34,17 @@ class Register {
         $this->currentSale->becomeComplete();
     }
 
-    public function enterItem($id, $quantity) {
-        $desc = new ProductDescription();
+    public function enterItem(int $id, int $quantity) {
+        //$desc = new ProductDescription();
         $desc = $this->catalog->getProductDescription($id);
         $this->currentSale->makeLineItem($desc, $quantity);
     }
 
     public function makeNewSale() {
-        $this->currentSale=new Sale();
+        $this->currentSale = new Sale();
     }
 
-    public function makePayment($cashTendered) {
+    public function makePayment(int $cashTendered) {
         $this->currentSale->makePayment($cashTendered);
     }
 

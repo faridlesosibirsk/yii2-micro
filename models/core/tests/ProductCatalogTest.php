@@ -13,8 +13,8 @@ final class ProductCatalogTest extends TestCase {
         $id1 = 100;
         $id2 = 200;
         $price = 3;
-        $this->desc1 = new ProductDescription();
-        $this->desc1->ProductDescription($id1, $price, 'товар 1');
+        //$this->desc1 = new ProductDescription();
+        $this->desc1 = new ProductDescription($id1, $price, 'товар 1');
         $this->assertNotNull($this->desc1);
         $this->desc2 = new ProductCatalog();
         $this->desc2->productCatalog();

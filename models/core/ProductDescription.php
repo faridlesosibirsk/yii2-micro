@@ -2,13 +2,24 @@
 
 namespace app\models\core;
 
-class ProductDescription {
+interface InterfaceProductDescription {
+
+    public function __construct(int $id, int $price, string $description);
+
+    public function getId();
+
+    public function getPrice();
+
+    public function getDescription();
+}
+
+final class ProductDescription implements InterfaceProductDescription {
 
     private $id;
     private $price;
     private $description;
 
-    public function ProductDescription($id, $price, $description) {
+    public function __construct(int $id, int $price, string $description) {
         $this->id = $id;
         $this->price = $price;
         $this->description = $description;

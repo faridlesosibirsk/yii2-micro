@@ -5,7 +5,14 @@ namespace app\models\core;
 use app\models\core\Register;
 use app\models\core\ProductCatalog;
 
-class Store {
+interface InterfaceStore {
+
+    public function __construct();
+
+    public function getRegister();
+}
+
+final class Store implements InterfaceStore {
 
     private $catalog;
     private $register;

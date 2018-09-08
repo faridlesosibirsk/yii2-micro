@@ -2,12 +2,18 @@
 
 namespace app\models\core;
 
-class Payment {
+interface InterfacePayment {
+
+    public function __construct(int $cashTendered);
+
+    public function getAmount();
+}
+
+final class Payment implements InterfacePayment {
 
     private $amount;
 
-    public function Payment($cashTendered) {
-
+    public function __construct(int $cashTendered) {
         $this->amount = $cashTendered;
     }
 
